@@ -10,7 +10,7 @@ project(mylib
 )
 
 # Testing utilities. They are only included if the project is at the top
-# level, as it defines a ENABLE_TESTING variable by default initialized
+# level, as it defines a BUILD_TESTING variable by default initialized
 # to true.
 if(PROJECT_IS_TOP_LEVEL)
   include(CTest)
@@ -58,7 +58,7 @@ target_sources(mylib
       "include/mylib/hello_world.h"
 )
 
-if(mylib_BUILD_TESTS)
+if(mylib_BUILD_TESTS AND BUILD_TESTING)
   add_subdirectory(tests)
 endif()
 
