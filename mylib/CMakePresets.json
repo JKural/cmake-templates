@@ -1,0 +1,26 @@
+{
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "warnings-gcc-clang",
+      "environment": {
+        "WARNING_FLAGS": "-Wall -Wextra -pedantic"
+      }
+    },
+    {
+      "name": "default",
+      "displayName": "Default config",
+      "description": "Default configuration",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_CXX_FLAGS": "$env{WARNING_FLAGS}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+# Include the exported targest
+include("${CMAKE_CURRENT_LIST_DIR}/${PROJECT_NAME}-targets.cmake")
+
+# Check that all required components have been imported
+check_required_components(mylib)
