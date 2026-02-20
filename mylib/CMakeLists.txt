@@ -1,5 +1,5 @@
 # Minimal version of cmake required to run the script.
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.24)
 
 # Project definition.
 project(mylib
@@ -29,7 +29,7 @@ option(mylib_INSTALL "Enable installation of mylib" ${PROJECT_IS_TOP_LEVEL})
 # The library traget.
 add_library(mylib)
 
-# Its version and soversion, useful when built as shared library.
+# Its version and soversion, useful when built as a shared library.
 set_target_properties(mylib
   PROPERTIES
     VERSION ${PROJECT_VERSION}
